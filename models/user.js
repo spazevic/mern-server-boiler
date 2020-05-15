@@ -43,7 +43,7 @@ userSchema.set('toJSON', {
 })
 
 userSchema.methods.validPassword = function (typedPassword) {
-	return bcrypt.comparesync(typedPassword, this.password)
+	return bcrypt.compareSync(typedPassword, this.password)
 }
 
 // TODO: Export user model
