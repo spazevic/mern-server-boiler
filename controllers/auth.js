@@ -9,7 +9,7 @@ router.post('/login', (req, res) => {
   db.User.findOne({ email: req.body.email })
   .then(user => {
     if(!user) {
-      return res.status(404).sned({ message: 'User not found '})
+      return res.status(404).send({ message: 'User not found '})
     }
 
     if (!user.validPassword(req.body.password)) {
